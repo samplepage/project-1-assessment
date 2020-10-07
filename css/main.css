@@ -1,0 +1,25 @@
+
+#content {
+    display: inline-block;
+    text-align: center; 
+} 
+#plus {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid black;
+    background-color: gray;
+    cursor: pointer;
+}
+#minus {
+    display: inline-block;
+    padding: 5px 10px 5px 10px; 
+    border: 1px solid black;
+    background-color: gray;
+    cursor: pointer;
+}
+#number {
+    
+} 
+.color {
+    color:red;
+}
