@@ -1,4 +1,4 @@
-let count = 0; 
+let count = 0;  
 document.querySelector('#count').innerHTML = count; 
 
 let thisPlus = document.querySelector('#plus');
@@ -9,12 +9,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const increaseNumber = () => {
         console.log(count);
         //console.log(input.value); 
-        count = count + input.value;  
+        count = count + parseInt(input.value);  
         document.querySelector('#count').innerHTML = count;
         if (count < 0) {
             document.querySelector('#count').classList.add('color');
         }
-    };   
+        if (count >= 0) {
+            document.querySelector('#count').classList.remove('color');
+        }
+    };    
 
     const decreaseNumber = () => {
         console.log(count);
@@ -22,6 +25,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         document.querySelector('#count').innerHTML = count; 
         if (count < 0) {
             document.querySelector('#count').classList.add('color');
+        }
+        if (count >= 0) {
+            document.querySelector('#count').classList.remove('color');
         }
     };    
 
