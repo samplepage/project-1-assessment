@@ -17,9 +17,9 @@
     background-color: gray;
     cursor: pointer;
 }
-#number {
-    
-} 
 .color {
     color:red;
+}
+form {
+    display: inline-block;
 }

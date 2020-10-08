@@ -1,38 +1,32 @@
-let count = 0;
+let count = 0; 
 document.querySelector('#count').innerHTML = count; 
-
-function onload() {
-    console.log(count);
-};  
-
-let thatForm = document.getElementById('thisForm'); 
-let bForm = thatForm.value;
 
 let thisPlus = document.querySelector('#plus');
 let thisMinus = document.querySelector('#minus'); 
 
+document.addEventListener('DOMContentLoaded', ()=>{
 
-const increaseNumber = () => {
-    console.log(count);
-    console.log(bForm);
-    bForm += count;  
-    //document.querySelector('#count').innerHTML = count;  
-}; 
+    const increaseNumber = () => {
+        console.log(count);
+        //console.log(input.value); 
+        count = count + input.value;  
+        document.querySelector('#count').innerHTML = count;
+        if (count < 0) {
+            document.querySelector('#count').classList.add('color');
+        }
+    };   
 
+    const decreaseNumber = () => {
+        console.log(count);
+        count = count - input.value;
+        document.querySelector('#count').innerHTML = count; 
+        if (count < 0) {
+            document.querySelector('#count').classList.add('color');
+        }
+    };    
 
-const decreaseNumber = () => {
-    console.log(count);
-    bForm -= count;
-    //document.querySelector('#count').innerHTML = count; 
-};  
+    //event listeners-------------------
+    thisPlus.addEventListener('click', increaseNumber);
+    thisMinus.addEventListener('click', decreaseNumber); 
 
-/*const changeColor = () => {
-    if (count < 0) {
-        document.querySelector('#count').classList.add('color');
-    }
-    <form id="aForm" action="get">
-}*/
-
-//event listeners-------------------
-thisPlus.addEventListener('click', increaseNumber);
-thisMinus.addEventListener('click', decreaseNumber); 
+})  
